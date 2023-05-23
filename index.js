@@ -9,12 +9,11 @@ let inputTextValue = '';
 
 
 const buttonFunction = () => {
-    (inputTextValue === '') ? alert('Please type into the box') : console.log(inputTextValue)
+    (inputTextValue === '') ? alert('Please type into the box') : console.log(inputTextValue);
 }
 
 submitButton.addEventListener('click', buttonFunction);
 
 inputTextField.addEventListener('input', (eventObject) => {
     inputTextValue = eventObject.target.value;
-    return inputTextValue;
 })
