@@ -24,25 +24,34 @@ const buttonFunction = () => {
     } else {
         let newItem = createListItem(inputTextValue);
         todoList.appendChild(newItem);
-    }
+        // delete comment to test code console.log(newItem);
+        }
     inputTextField.focus();
 }
 
 const checkedBox = (checking) => {
     let listItem = document.querySelector(`#${checking}`);
     let testCase = document.querySelector(`#${checking}1`);
+    // delete comment to test code console.log(`#${checking}1`);
+    // delete comment to test code console.log(testCase);
     if (testCase.checked) {
         listItem.classList.add('checked');
+        console.log(listItem);
     } else {
         listItem.classList.remove('checked');
     }
 }
 
+const addHyphen = (string) => {
+    let newString = string.replaceAll(' ', '-');
+    inputTextValue = newString;
+}
 
 submitButton.addEventListener('click', buttonFunction);
 
 inputTextField.addEventListener('input', (eventObject) => {
     inputTextValue = eventObject.target.value;
+    addHyphen(inputTextValue);
 })
 
 todoList.addEventListener('change', (eventObject) => {
