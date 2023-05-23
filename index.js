@@ -7,9 +7,22 @@ let inputTextField = document.querySelector('#input-text')
 let todoList = document.querySelector('#list');
 let inputTextValue = '';
 
+const createListItem = (textValue) => {
+    let newItem = document.createElement('li');
+    newItem.innerHTML = `
+        <input type='checkbox' name='${textValue}' />
+        <label for='${textValue}'>${textValue}</label>
+    `
+    return newItem;
+}
 
 const buttonFunction = () => {
-    (inputTextValue === '') ? alert('Please type into the box') : console.log(inputTextValue);
+    if (inputTextValue == '') {
+        alert('Please type into the box')
+    } else {
+        let newItem = createListItem(inputTextValue);
+        todoList.appendChild(newItem);
+    }
 }
 
 submitButton.addEventListener('click', buttonFunction);
