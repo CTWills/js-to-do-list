@@ -11,6 +11,7 @@ let checkedBoxValue = '';
 const createListItem = (textValue) => {
     let newItem = document.createElement('li');
     newItem.setAttribute('id', `${textValue}`)
+    newItem.classList.add('size');
     newItem.innerHTML = `
         <input type='checkbox' id='${textValue}1' name='${textValue}' value='${textValue}'/>
         <label for='${textValue}'>${textValue}</label>
