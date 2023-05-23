@@ -21,11 +21,17 @@ li {
 header {
     text-align: center;
     font-style: italic;
+    font-size: 200%;
 }
 
 .inputs {
     text-align: center;
 }
+
+.size {
+    font-size: 125%;
+}
+
 
 body {
     background-color: bisque;
