@@ -9,7 +9,7 @@ let inputTextValue = '';
 
 
 const buttonFunction = () => {
-    console.log(inputTextValue);
+    (inputTextValue === '') ? alert('Please type into the box') : console.log(inputTextValue)
 }
 
 submitButton.addEventListener('click', buttonFunction);
