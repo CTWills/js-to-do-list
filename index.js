@@ -11,7 +11,7 @@ const createListItem = (textValue) => {
     let newItem = document.createElement('li');
     newItem.innerHTML = `
         <id = '${textValue}' />
-        <input type='checkbox' name='${textValue}' value='${textValue}'/>
+        <input type='checkbox' name='ToDoItems' value='${textValue}'/>
         <label for='${textValue}'>${textValue}</label>
     `
     return newItem;
