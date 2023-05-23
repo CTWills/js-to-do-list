@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>To-Do-List</title>
         <link rel="stylesheet" href="style.css">
-        <script src="index.js"></script>
     </head>
     <body>
         <!-- 1. Person needs to input a to-do item -->
@@ -17,15 +16,13 @@
                 <h1>To-Do-List:</h1>
             </header>
             <div>
-                <input type="text" placeholder="Input a task to do" value="">
-                <input type="button" value="Sumbit to list">
+                <input id ='input-text' type='text' placeholder='Input a task to do'>
+                <input id='submit-button' type='button'  value='Sumbit to list'>
             </div>
-            <ul>
-                <li><input type="checkbox" name="" id=""> </li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
+            <ul id='list'>
+                <!-- <li><input type="checkbox" name="" id=""> </li> -->
             </ul>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
