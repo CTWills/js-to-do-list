@@ -6,12 +6,13 @@ let submitButton = document.querySelector('#submit-button');
 let inputTextField = document.querySelector('#input-text')
 let todoList = document.querySelector('#list');
 let inputTextValue = '';
+let checkedBoxValue = '';
 
 const createListItem = (textValue) => {
     let newItem = document.createElement('li');
+    newItem.setAttribute('id', `${textValue}`)
     newItem.innerHTML = `
-        <id = '${textValue}' />
-        <input type='checkbox' name='ToDoItems' value='${textValue}'/>
+        <input type='checkbox' id='${textValue}1' name='${textValue}' value='${textValue}'/>
         <label for='${textValue}'>${textValue}</label>
     `
     return newItem;
@@ -27,8 +28,29 @@ const buttonFunction = () => {
     inputTextField.focus();
 }
 
+const checkedBox = (checking) => {
+    let listItem = document.querySelector(`#${checking}`);
+    let testCase = document.querySelector(`#${checking}1`);
+    if (testCase.checked) {
+        listItem.classList.add('checked');
+    } else {
+        listItem.classList.remove('checked');
+    }
+}
+
+
 submitButton.addEventListener('click', buttonFunction);
 
 inputTextField.addEventListener('input', (eventObject) => {
     inputTextValue = eventObject.target.value;
 })
+
+todoList.addEventListener('change', (eventObject) => {
+    checkedBoxValue = eventObject.target.value;
+    checkedBox(checkedBoxValue);
+})
+
+
+
+
+
