@@ -10,7 +10,8 @@ let inputTextValue = '';
 const createListItem = (textValue) => {
     let newItem = document.createElement('li');
     newItem.innerHTML = `
-        <input type='checkbox' name='${textValue}' />
+        <id = '${textValue}' />
+        <input type='checkbox' name='${textValue}' value='${textValue}'/>
         <label for='${textValue}'>${textValue}</label>
     `
     return newItem;
@@ -23,6 +24,7 @@ const buttonFunction = () => {
         let newItem = createListItem(inputTextValue);
         todoList.appendChild(newItem);
     }
+    inputTextField.focus();
 }
 
 submitButton.addEventListener('click', buttonFunction);
